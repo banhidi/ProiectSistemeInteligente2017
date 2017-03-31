@@ -16,371 +16,223 @@
 \begin{document}
 \vspace{-5cm}
 \begin{center}
-Department of Computer Science\\
-Technical University of Cluj-Napoca\\
+Departamentul de Calculatoare \c si Tehnologia Informa\c tiei\\
+Universitatea Tehnic\u a din Cluj-Napoca\\
 \includegraphics[width=10cm]{fig/footer}
 \end{center}
 \vspace{1cm}
 %\maketitle
 \begin{center}
-\begin{Large}
- %\textbf{Introduction to Artificial Intelligence}\\
-\textbf{Intelligent Systems}\\
-\end{Large}
-\textit{Laboratory activity 2016-2017}\\
-\vspace{3cm}
-Project title: ....\\
-Tool: \\
-\vspace{1.5cm}
-Name:\\
-Group:\\
-Email:\\
-\vspace{6cm}
-Assoc. Prof. dr. eng. Adrian Groza\\
-Adrian.Groza@cs.utcluj.ro\\
-\vspace{1cm}
-\includegraphics[width=10cm]{fig/footer}
+  \begin{Large}
+    \textbf{Sisteme Inteligente}\\
+  \end{Large}
+  
+  \textit{Activitate de laborator 2016-2017}\\
+  \vspace{3cm}
+  Titlul proiectului: Clasificarea email-urilor\\
+  Tool: LibSVM\\
+  \vspace{1.5cm}
+  Nume: B\'anhidi Zolt\'an\\
+  Grupa: 30234\\
+  Email: banhidizoli@gmail.com\\
+  
+  \vspace{6cm}
+  Prof. dr. ing. Adrian Groza\\
+  Adrian.Groza@cs.utcluj.ro\\
+  
+  \vspace{1cm}
+  \includegraphics[width=10cm]{fig/footer}
 \end{center}
 
 \tableofcontents
 
-%\input{policy}
-
-%\chapter{Laboratory works}
-
-\chapter{AI projects and tools ($W_1$)}
-
-
-\colorbox{blue!20}{\fbox{\begin{minipage}{1.0\textwidth}
-The teaching objectives for this week are:
-\begin{enumerate}
- \item To identify existing projects for undergraduate level in the AI domain.
-\item To get awareness of the effort expected for the laboratory activity by browsing past projects at TUCN and other universities.
-\item To get used with the technical instrumentation used during this semester. 
-%That is: i) assigning the AI tool, ii) set your latex environment for writing your final report.
-\end{enumerate}
-\end{minipage}}}
-\vspace{0.2cm}
-
-At the beginning of each class, please write what do you expect to learn/achieve/understand/develop during the following two hours.
-
-\vspace{0.2cm}
-
-\colorbox{blue!20}{\fbox{\begin{minipage}{16cm}
-My personal objectives for this class are:
-\begin{enumerate}
- \item 
-\end{enumerate}
-\end{minipage}}}
-\vspace{0.2cm}
-This laboratory follows a project-based learning methodology for learning artificial intelligence.
-
-An ideal project should be one that demonstrates some creativity, 
-attempts to answer an interesting research question, 
-offers an interesting AI solution to a real scenario and validates the solution through graphs and experiments.
-These aims cannot be achieved without reading relevant AI articles for your scenario.
-
-\section{AI undergraduate projects}
-This section aims to provide you starting ideas on student AI projects.
-Browse the following resources:  
-\begin{enumerate}
-\item https://www.quora.com/What-are-basic-artificial-intelligence-projects-for-beginners
- \item \href{http://www.akira.ruc.dk/~keld/teaching/projektforslag/ai_projects.pdf}{Project proposals in AI} at Roskilde University, Denmark
-\item \href{http://www.cs.cmu.edu/~./10701/projects.html}{Machine learning project} suggestions at School of Computer Science, Carnegie Mellon University (http://www.cs.cmu.edu/~epxing/Class/10701/project.html)  
-\item Challenges in artificial intelligence domain at \href{https://www.hackerrank.com/domains}{HacckerRank}
-\item Repository of AI assignments at \href{http://modelai.gettysburg.edu/}{AI-repository}
-\item Collection of projects at MIT open coursware for the Knowledge-Based Applications Systems class
-\href{http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-871-knowledge-based-applications-systems-spring-2005/projects/}{MITOpenCoursware}
-\end{enumerate}
-
-The projects are intended to let you look in depth at some area of artificial intelligence 
-that may only be covered briefly in class or~\cite{russell2003artificial}. 
-You can see the AI lab as an opportunity for you to explore an interesting problem of your choice in the context of a real-world scenario.
-Hence, we encourage you to do some original research in the AI domain that is of interest to you. 
-To give you an idea, about how your fellows work as students, take a look at the examples below:
-
-%Here is a list of project ideas:
-
-\begin{enumerate}
- \item A machine learning approach for identifying patterns at Eurovision musical competition. 
-\item Performance comparison of AI algorithms in the Wumpus world.
-\item A multi-agent system for playing the board game Risk. Assess the
-relative strength of each player and the strategic value of each country. 
-\item Intersection situation awareness and normative reasoning.
-\item Summarize an article written in wikipedia or other technical text.
-\item Checking if a small text is entailed by a larger text.
-\item Extracting arguments in a persuasive or legal text.
-\item A knowledge-based computer purchasing adviser.
-\item Build an ontology from a collection of documents using machine learning.
-\item Legal assistant in case of divorces. Splitting marital property between spouse.
-\item Advisor for installing a wind turbine.
-\item Compliance checking of architectural plans for buildings.
-\item Knowledge based system for automobile fault diagnosis.
-\item Real estate analyzer system. 
-\item Fake opinion detection system. 
-\end{enumerate}
-
-
-%Sample projects at TUCN are:
-
-%\begin{enumerate}
-% \item 
-%\end{enumerate}
-
-
-Projects at other universities:
-\begin{enumerate}
- \item A project submitted by Greg Barish entitled "Approaches to integrating abstractions in graphplan-based planning systems" for the Artificial Intelligence Planning class at University of Southern California.
-\href{http://www.isi.edu/~blythe/cs541/Projects/barish.pdf}{Final Report}
-\item A project submitted by Victor L. Williamson entitled ``What to do With a Patient Who Has
-Chest Pain?'' \href{http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-871-knowledge-based-applications-systems-spring-2005/projects/william_cp_ches.pdf}{Final report}
-\end{enumerate}
-
-You may also check AI books like "Programming Collective Intelligence" by Toby Segaran~\cite{book:1527985}. 
-It contains many interesting examples.
-
-\section{AI-related competitions}
-As part of your laboratory work, we encourage you to participate to various students competitions in AI:
-
-\begin{enumerate}
-\item Machine learning competitions: \href{https://www.kaggle.com/}{Kaggle}
-\item Ontology development competition: \href{http://fois2014.inf.ufes.br/p/call-for-ontology-competition.html}{Ontology Competition}
-\item Competition on computational models of argumentation: \href{http://argumentationcompetition.org/}{ICCMA}
-\item Competitive programming \href{https://www.hackerrank.com/domains}{HacckerRank}
-\item Student StarCraft AI tournament 2016 \href{http://sscaitournament.com/}{SSCAIT}
-\item Power trading agent competition \href{http://www.powertac.org/node/39}{PTAC}
-\item Ontology alignment evaluation initiative \href{http://oaei.ontologymatching.org/2015/}{OAEI2015}
-\end{enumerate}
-
-\paragraph{Disseminating your work.}
- Presenting your results at student conferences increases your chances to obtain a master scholarship. 
- One possible student conference is:
-
-\begin{enumerate}
- \item Computer Science Students Conference at UBB and TUCN: 
- \href{http://cs.utcluj.ro/csd/site/index.html}{CSSC}
-\end{enumerate}
-
-
-\section{Running latex}
-LATEX is a typesetting system suitable for producing scientific and mathematical documents. 
-Three starting points are: 
-\begin{itemize}
- \item \href{www.maths.tcd.ie/~dwilkins/LaTeXPrimer/}{Getting started with LaTeX (David R. Wilkins)} 
-\item \href{frodo.elon.edu/tutorial/tutorial/tutorial.html}{LaTeX Tutorial} (Jeff Clark)
-\item \href{http://cs-gw.utcluj.ro/~srazvan/articleSchema.tgz}{Very Brief Introduction to Latex} by Radu Slavescu
-\end{itemize}
-
-
-Kile is one latex editor. 
-If installed, just type \texttt{kile} in the terminal. 
-
-
-\section{Linux support}
-
-Becoming familiar with the Linux requires patience. 
-You must have the desire to try and figure things out on your own, rather than having everything done for you. 
-Two starting references are:
-\begin{itemize}
- \item \href{http://tldp.org/LDP/intro-linux/html/index.html}{Introduction to Linux A Hands on Guide, Machtelt Garrels} 
- \item \href{http://cs-gw.utcluj.ro/~srazvan/articleSchema.tgz}{Brief Synopsis of Linux} by Radu Slavescu
-\end{itemize}
-
-Table~\ref{tab:commands} lists basic commands.
-
-
-\begin{table}
-\caption{Quickstart linux commands.}
-\label{tab:commands}
-\begin{center}
-\begin{tabular}{|l|l|}\hline
-Command & Meaning \\ \hline
-pwd & display present working directory \\ \hline
-ls & displays the files in the current working directory\\ \hline
-cd & change the directoris \\ \hline
-chmod +x & set a file as executable \\ \hline
-man & read man pages of a command\\ \hline
-ssh & connects to a secure shell\\ \hline
-\end{tabular}
-\end{center}
-\end{table}
 
 
 
 
-\section{Exercises}
-\begin{enumerate}
- \item Compile the \texttt{is.tex} file in order to start writing your notes. 
-Recall that this documentation is also a \textit{support for you}, during the design and implementation of you ideas. 
-Make an habit in writing down your ideas from the first week in a professional manner.
-\item Identify 3 Web resources with ideas on student AI projects.
-\item Think at one of your hobbies. Would be possible to develop something on that line?
-\item Identify a media source for AI-news. Investigate interesting ideas in that news. 
-Do the AI-technologies behind these ideas appear in the AIMA book?
-\item Identify AI journals in Science Direct and Springer Verlag. Browse some abstracts from these journals.
-\item Identify an AI competition. Consider making a team of 2-3 students to participate at that competition.
-\item Imagine that you are the founder of a start-up. What kind of innovative project would be feasible for you company? 
-\item Write a short list (3 to 5) of possible projects for this lab. Be ambitios. 
-\item Display network information for your workstation.
-\item Connect via \texttt{ssh} to another workstation. 
-\end{enumerate}
 
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 2       
-\end{minipage}}
-\vspace{0.5cm}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 3       
-\end{minipage}}
-\vspace{0.5cm}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 4       
-\end{minipage}}
-\vspace{0.5cm}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 5       
-\end{minipage}}
-\vspace{0.5cm}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 6       
-\end{minipage}}
-\vspace{0.5cm}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 7       
-\end{minipage}}
-\vspace{0.5cm}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 8       
-\end{minipage}}
-\vspace{0.5cm}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 9       
-\end{minipage}}
-\vspace{0.5cm}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 10       
-\end{minipage}}
-\vspace{0.5cm}
 
 \chapter{Installing the tool ($W_2$)}
-\colorbox{blue!20}{\fbox{\begin{minipage}{16cm}The teaching objectives for this week are:
-\begin{enumerate}
- \item To install the tool on a Linux system
-\item To get aware of tool plugins, extensions, and running parameters.
-\end{enumerate}
-\end{minipage}}}
 
-\vspace{0.5cm}
+  \par
+  \^In cadrul acestui proiect este folosit programul \textit{LibSVM} pentru clasificarea email-urilor. Pentru rularea
+  proiectului este necesar\u a instalarea ma\c sinii virtuale Java, deoarece prelucrarea \c si transformarea datelor
+  \^in formatul numeric \^in\c teles de \textit{LibSVM} este realizat\u a de un program scris \^in limbajul Java.
+  
+  \^In continuare se prezint\u a metodade instalare a tool-ului \textit{LibSVM} \c si a pachetului Oracle JDK 
+  pentru sistemul de operare Ubuntu 16.10 64, versiunea pe 64 de bi\c ti.
+  
+  \par
+  Programul \textit{LibSVM} se poate desc\u arca de la adresa 
+  \href{https://www.csie.ntu.edu.tw/~cjlin/libsvm/}{https://www.csie.ntu.edu.tw/~cjlin/libsvm/}.
+  Dup\u a finalizarea desc\u arc\u arii, fi\c sierul desc\u arcat poate fi dezarhivat folosind comanda
+  \begin{center}
+    \verb|tar -xvzf nume\_ fi\c sier|
+  \end{center}
 
-\colorbox{blue!20}{\fbox{\begin{minipage}{1.0\textwidth}
-My personal objectives for this class are:
-\begin{enumerate}
- \item 
- \item 
-\end{enumerate}
-\end{minipage}}}
-\vspace{0.2cm}
+  \par
+  Dup\u a dezarhivare, trebuie s\u a navig\u am in interiorul fi\c sierului dezarhivat cu comanda linux 
+  \verb|cd|. Pentru a compila programul, trebuie doar s\u a introducem comanda \verb|make|. Dup\u a executarea 
+  compil\u arii vor fi generate urm\u atorele executabile:
+  
+  \begin{center}
+    \begin{tabular}{ | l | p{8cm} | }
+      \hline
+      \textbf{Nume fi\c sier executabil} & \textbf{Descriere} \\
+      \hline
+      
+      \verb|svm-scale| & Programul care scaleaz\u a datele de intrare pentru a asigura acurate\c te c\^at mai mare \\
+      \hline
+      
+      \verb|svm-train| & Programul care generaez\u a un model pe baza exemplelor furnizate (\^inva\c t\u a) \\
+      \hline
+      
+      \verb|svm-predict| & Programul cu ajutorul c\u areia putem rula testele pe baza 
+	modelului generat prin \^inv\u a\c tare \\
+      \hline      
+    \end{tabular}
+  \end{center}
 
-The AI lab follows the problem-based learning model~\cite{hmelo2004problem}. 
-In this model, you have to:
-\begin{enumerate}
- \item identify a real world situation that has no clear (or right, or efficient) 
-solution;
-\item  develop a viable solution to the identified problem;
-\item  get new information through self-directing learning;
-\item  take the decisions needed during the lifecycle of your project 
+  \par
+  \^In continuare se prezint\u a instalarea a \textit{Java Development Kit}. Acest pachet con\c tine at\^at 
+  ma\c sina virtual\u a Java c\^at \c si compilatorul Java respectiv biblioteca standard al limbajului.
+  \textit{JDK} poate fi desc\u arcat de pe pagina web 
+  \href{http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}
+  {http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}.
+  Trebuie selectat\u a versiunea destinat\u a pentru sistemul de operare Linux x64, cu extensia 
+  \textit{tar.gz}. 
+  
+  \par
+  Dup\u a finalizarea desc\u arc\u arii fi\c sierului, acesta trebuie dezarhivat cu ajutorul comenzii de dezarhivare 
+  folosite \c si la \textit{LibSVM}. Fi\c sierul dezarhivat trebuie copiat \^in directorul 
+  \verb|/usr/lib/jvm| cu ajutorul comenzii:
+  
+  \begin{center}
+    \verb|mv nume_fisier /usr/lib/jvm|
+  \end{center}
+  
+  \par
+  Urm\u atorul pas este s\u a configur\u am noul \textit{jvm} instalat ca cel de baz\u a al sistemului.
+  Prima dat\u a trebuie s\u a comunic\u am sistemului de operare instalarea cu ajutorul comenzilor
+  
+  \begin{center}
+    \begin{verbatim}
+	sudo update-alternatives --install 
+	  /usr/bin/java java /usr/lib/jvm/nume_fisier/jre/bin/java 2000
+    \end{verbatim}
 
-\end{enumerate}
+    \begin{verbatim}
+	sudo update-alternatives --install 
+	  /usr/bin/javac javac /usr/lib/jvm/nume_fisier/bin/javac 2000
+    \end{verbatim}
+  \end{center}
+  
+  \par
+  Apoi trebuie s\u a configuram acestea cu ajutorul comenzilor
+  
+  \begin{center}
+    \begin{verbatim}
+      sudo update-alternatives --configure java
+      sudo update-alternatives --configure javac
+    \end{verbatim}
+  \end{center}
+  
+  Trebuie selectat \^in fiecare caz componenta nou instalat\u a.
+  
 
-
-%(staff act as faccilitators by helping you during the cognitive process of reflection)
-The first sub-problem that you are facing is to install 
-the tool on a Linux distribution.
-%Linux advantages
-
-First, you need to find the version of your operating system.
-To find the kernel version, type in a terminal \texttt{uname -a}.
-To find the Linux distribution type \texttt{lsb\_release -a}.
-
-Then you need to download the distribution of the tool adequate for your system.
-
-Extract the archive in your own directory. 
-Avoid using spaces for the directory name. 
-Identify a README file or Installation instructions for the tool.
-
-When browsing the requirements, check first whether they have been not 
-already installed.
-For instance, Java might be already in the system. 
-You can check this with \texttt{java -version}.
-
-List here the steps done for installing the tool. 
-A typical installation could look like:
-
-\begin{verbatim}
-./configure
-make
-make install
-export PATH=PATH:......
-\end{verbatim}
-
-List here the exact commands for running the tool. 
-These lines will save you precious time in the next week.
-
-Finally, you need to check the installation.
-
-
-In case something goes wrong:
-
-\begin{enumerate}
- \item Try to install a newer/older version of the tool
-\item Try to obtain the source code and compile it.
-\item Install the proper version for the software requirements (i.e., correct LISP or Prolog),
-\item Take a look into the installation/running scripts or in the \texttt{makefile} file.
-\item Try to identify a version of the tool written in other programming language.
-\end{enumerate}
-
-It is your interest not to get stuck with this installation. 
-It is therefore important to identify a solution such that you 
-can start shaping your project from the next laboratory. 
-
-
-\section{Exercises}
-\begin{enumerate}
- \item List the steps done for installing the tool. 
- \item List the exact commands needed to run the tool. 
- \item What other AI tools can use the output of your tool? 
- Can you indentify such tools on the Web?
- Try to assess the difficulty level and risks of integrating such tools for your project.
-\end{enumerate}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 1       
-\end{minipage}}
-\vspace{0.5cm}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 2       
-\end{minipage}}
-\vspace{0.5cm}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 3       
-\end{minipage}}
-\vspace{0.5cm}
+  
+  
+  
+  
 
 
 
+\chapter{Rularea \c si \^in\c telegerea exemplelor ($W_3$)}
 
-\chapter{Running and understanding examples ($W_3$)}
+  \par
+  Support Vector Machines (SVM) este o tehnic\u a des folosit\u a \^in domeniul inteligen\c tei artificiale
+  pentru clasificarea datelor. SVM este de fapt o colec\c tie de algoritmi de \^inv\u a\c tare
+  (machine learning) care sunt folosite pentru clasificarea datelor.
+  
+  \par
+  O particularitate a SVM-ului este c\u a algoritmii pot prelucra doar date numerice. Astfel \^in cazul \^in care
+  se dore\c stea clasificarea unui text, acesta trebuie transformat \^intr-o reprezentare numeric\u a.
+  
+  \par
+  \^In cadrul acestui proiect va fi folosit programul \textit{LibSVM} pentru clasificarea email-urilor. 
+  Acesta este o implementare r\u asp\^andit\u a a SVM.
+  Deoarece proiectul se concentreaz\u a pe clasificarea texturilor folosind SVM, \^in clasificare se vor
+  lua \^in considerare dor subiectele email-urilor. Aceste \c siruri de caractere sunt prelucrate \c si transformate
+  de c\u atre un program Java \^in format numeric. Valorile ob\c tinute trebuie scalate folosind \verb+svm-scale+
+  pentru a asigura o acurate\c te c\^ at mai mare a rezultatelor.
+  
+  \par 
+  Datele ob\c tinute dup\u a scalare sunt folosite pentru a antrena re\c teaua SVM, care dup\u a aceast\u a 
+  etap\u a gener\^and un model este capabil s\u a clasifice noile date de intrare. Este important ca datele de
+  intrare s\u a fie generale, con\c tin\^and c\^at mai multe exemple din fiecare clas\u a.
+  
+  \par
+  Datele de antrenare ale \textit{LibSVM} au urm\u atorul format:
+  
+  \begin{verbatim}
+    label index1:value1 index2:value2 ...
+  \end{verbatim}
+  
+  \verb|label| este un num\u ar \^intreg care indic\u a num\u arul clasei de care apar\c tine data respectiv\u a.
+  \verb|indexi| sunt valori \^intregi \^in ordine cresc\u atoare care reprezint\u a num\u arul caracteristicii, iar 
+  \verb|valuei| este num\u arul real care indic\u a caracteristica respectiv\u a a datei curente. Altfel spus 
+  data curent\u a are valoarea \verb|valuei| la caracteristica \verb|indexi|.
+  
+  \par
+  Datele de intrare \c si de test au formatul prezentat, \c si sunt separate printre ele prin caracterul 
+  \verb|'\n'|. Deci fiecare dat\u a trebuie s\u a fie conform formatului prezentat \c si s\u a fie
+  amplasat\u a pe un r\^and al fi\c sierului de intrare pentru \^inv\u a\c tare.
 
+  \par
+  Un exemplu bun este cel \^in care dorim s\u a clasific\u am propozi\c tiile din punctul de vedere al 
+  complexit\u a\c tii acestora. Avem deci propozi\c tii simple \c si compuse. Lu\u am \^in considerare de
+  exemplu caracteristici precum:
+   
+  \begin{itemize}
+     \item{} num\u arul virgulelor 
+     \item num\u arul caracterelor
+     \item num\u arul de apari\c tii ai cuvintelor de leg\u atur\u a (de exemplu: 
+      \textit{\c si}, \textit{respectiv}, \textit{a\c sadar}, \textit{totodat\u a} etc.)
+  \end{itemize}
+  
+  \par
+  Num\u arul virgulelor va apare la indexul 1, num\u arul caracterelor la indexul 2 \c si num\u arul 
+  de cuvinte de leg\u atur\u a la indexul 3. Consider\u am c\u a propozi\c tie simpl\u a are eticheta clasei 
+  -1 \c si cea compus\u a eticheta clasei 1. 
+  
+  \par
+  Astfel propozi\c tia \textit{R\u azvan merge \c si la \c scoal\u a.} este reprezentat\u a prin linia
+  
+  \begin{verbatim}
+    -1 1:0 2:26 3:1
+  \end{verbatim}
+
+  Identic propozi\c tia \textit{Anca este harnic\u a, a\c sadar ea \^inva\c t\u a \^in fiecare zi.} este
+  reprezentat\u a prin linia
+  
+  \begin{verbatim}
+    1 1:1 2:50 3:1
+  \end{verbatim}
+  
+  Dup\u a crearea fi\c sierului de antrenare (denumit \verb|input.txt| care con\c tine 
+  date precum cele dou\u a enumerate mai sus), se antreneaz\u a SVM-ul care va rezulta 
+  un fi\c sier denumit \verb+model+ folosind comanda
+  
+  \begin{center}
+    \verb|./svm-train input.txt model|
+  \end{center}
+  
+  Apoi se creeaz\u a fi\c sierul de test care are aceea\c si forma ca \c si fi\c sierul \verb|input.txt|.
+  Apel\^and predic\c tia pe acest fi\c sier \textit{LibSVM} va determina de care clas\u a (-1 sau 1)
+  apar\c tine fiecare propozi\c tie \c si apoi va compara rezultele ob\c tinute cu cele date. Astfel se 
+  calculeaz\u a acurate\c tea. Predict\c tia se ruleaz\u a 
+
+  
 \colorbox{blue!20}{\fbox{\begin{minipage}{1.0\textwidth} 
                                           
 The teaching objectives for this week are:
@@ -436,38 +288,6 @@ Latex provides various environments for writing algorihms, including:
 \texttt{algorithm, algorithmic, algorithmicx, algpseudocode, algorithm2e}.
 
 The following example algorithm has been taken from~\cite{7034697}.
-
-\begin{algorithm}
-\label{alg:eval}
-\caption{Required steps for AHP-based ontology evaluation.}
-
-\KwIn{$\mathcal{O}$ - set of candidate ontologies; 
-      $\mathcal{W}$ - set of keywords of the domain; 
-      $\mathcal{T}$ - the criteria tree}
-\KwOut{$\langle ontology, [evaluation\ values] \rangle$, association list with ontologies as keys and evaluation values as pairs}
-
-$\mathcal{W_D}\leftarrow Update(\mathcal{W}, Wordnet)$ %\Comment{Wordnet supports the extension of keywords of the domain}
-
-\ForEach{$o\in \mathcal{O}$}{$DomainCoverage(o, \mathcal{W}_D)$} %If results are not satisfactory, improve data at step 1 %TODO formula. 
-
-Define a \textit{domain coverage threshold} $\delta$ $\geq$ 0 
-
-$\mathcal{O}_{\delta} \leftarrow Select(\mathcal{O},\delta)$
-%TODO use algorithm syntax
-
-\ForEach{ $o \in\mathcal{O}_{\delta} $}{
-\ForEach{non-leaf criterion $k \in \mathcal{T}$}{complete the $PC$ matrix to determine the weights of its sub-criteria}
-
-
-\ForEach{leaf (atomic) criterion $k \in \mathcal{T}$}{$OntologyMetrics(k,o)$}
-%TODO alternatives normalization
-
-Normalize ontology measurements to obtain weights for alternatives
-
-$WeightedSum(o,PC)$
-
-}
-\end{algorithm}
 
 
 \section{Exercises}
