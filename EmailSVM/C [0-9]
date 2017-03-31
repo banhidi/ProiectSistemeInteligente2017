@@ -1,0 +1,8 @@
+C [0-9]
+IFS {C}+
+I [-+]?{IFS}
+L [a-zA-Z]
+%%
+{I} printf("S-a recunoscut intregul: %s\n", yytext);
+{I}(\.{IFS})?([Ee]{I})? printf("S-a recunoscut numarul: %s\n", yytext);
+{L}({L}|{C})* printf("S-a recunoscut identificatorul: %s\n", yytext);
