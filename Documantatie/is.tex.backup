@@ -52,27 +52,30 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
 
 
 
-\chapter{Installing the tool ($W_2$)}
+\chapter{Instalarea programelor ($W_2$)}
 
   \par
   \^In cadrul acestui proiect este folosit programul \textit{LibSVM} pentru clasificarea email-urilor. Pentru rularea
   proiectului este necesar\u a instalarea ma\c sinii virtuale Java, deoarece prelucrarea \c si transformarea datelor
   \^in formatul numeric \^in\c teles de \textit{LibSVM} este realizat\u a de un program scris \^in limbajul Java.
   
-  \^In continuare se prezint\u a metodade instalare a tool-ului \textit{LibSVM} \c si a pachetului Oracle JDK 
-  pentru sistemul de operare Ubuntu 16.10 64, versiunea pe 64 de bi\c ti.
+  \^In continuare se prezint\u a metoda de instalare a tool-ului \textit{LibSVM} \c si a pachetului Oracle JDK
+  (\textit{Java Development Kit})
+  pentru sistemul de operare Ubuntu 16.10 64, versiunea pe 64 de bi\c ti (Oracle JDK este preferat fa\c t\u a de 
+  versiunile Open JDK pentru perfoman\c t\u a \c si compatibilitate maxim\u a).
   
   \par
   Programul \textit{LibSVM} se poate desc\u arca de la adresa 
   \href{https://www.csie.ntu.edu.tw/~cjlin/libsvm/}{https://www.csie.ntu.edu.tw/~cjlin/libsvm/}.
   Dup\u a finalizarea desc\u arc\u arii, fi\c sierul desc\u arcat poate fi dezarhivat folosind comanda
   \begin{center}
-    \verb|tar -xvzf nume\_ fi\c sier|
+    \verb|tar -xvzf nume_fisier|
   \end{center}
 
   \par
-  Dup\u a dezarhivare, trebuie s\u a navig\u am in interiorul fi\c sierului dezarhivat cu comanda linux 
-  \verb|cd|. Pentru a compila programul, trebuie doar s\u a introducem comanda \verb|make|. Dup\u a executarea 
+  Dup\u a dezarhivare, trebuie s\u a navig\u am \^in interiorul fi\c sierului dezarhivat cu comanda linux 
+  \verb|cd nume_fisier_dezarhivat|. Pentru a compila programul, trebuie doar s\u a introducem comanda 
+  \verb|make|. Dup\u a executarea 
   compil\u arii vor fi generate urm\u atorele executabile:
   
   \begin{center}
@@ -94,16 +97,18 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
   \end{center}
 
   \par
-  \^In continuare se prezint\u a instalarea a \textit{Java Development Kit}. Acest pachet con\c tine at\^at 
-  ma\c sina virtual\u a Java c\^at \c si compilatorul Java respectiv biblioteca standard al limbajului.
-  \textit{JDK} poate fi desc\u arcat de pe pagina web 
-  \href{http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}
-  {http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}.
-  Trebuie selectat\u a versiunea destinat\u a pentru sistemul de operare Linux x64, cu extensia 
-  \textit{tar.gz}. 
+  \^In continuare se prezint\u a instalarea pachetului \textit{Java Development Kit}. Acest pachet con\c tine at\^at 
+  ma\c sina virtual\u a Java c\^at \c si compilatorul Java respectiv biblioteca standard a limbajului.
+  JDK poate fi desc\u arcat de pe pagina web 
   
-  \par
-  Dup\u a finalizarea desc\u arc\u arii fi\c sierului, acesta trebuie dezarhivat cu ajutorul comenzii de dezarhivare 
+  \begin{center}
+    \href{http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}
+    {http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}
+  \end{center}
+  
+  Trebuie selectat\u a versiunea destinat\u a pentru sistemul de operare Linux pe 64 de bi\c ti (
+  \textit{x64}) cu extensia \textit{tar.gz}. Dup\u a finalizarea desc\u arc\u arii fi\c sierului, 
+  acesta trebuie dezarhivat cu ajutorul comenzii de dezarhivare 
   folosite \c si la \textit{LibSVM}. Fi\c sierul dezarhivat trebuie copiat \^in directorul 
   \verb|/usr/lib/jvm| cu ajutorul comenzii:
   
@@ -112,7 +117,8 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
   \end{center}
   
   \par
-  Urm\u atorul pas este s\u a configur\u am noul \textit{jvm} instalat ca cel de baz\u a al sistemului.
+  Urm\u atorul pas este s\u a configur\u am ma\c sina virtual\u a Java instalat\u a \^in acest mod
+  ca \c si cel de baz\u a al sistemului.
   Prima dat\u a trebuie s\u a comunic\u am sistemului de operare instalarea cu ajutorul comenzilor
   
   \begin{center}
@@ -128,7 +134,8 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
   \end{center}
   
   \par
-  Apoi trebuie s\u a configuram acestea cu ajutorul comenzilor
+  Apoi trebuie s\u a configur\u am acestea. Trebuie selectat \^in fiecare caz componenta nou instalat\u a 
+  \^in listele afi\c sate dup\u a rularea comenzilor
   
   \begin{center}
     \begin{verbatim}
@@ -137,7 +144,6 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
     \end{verbatim}
   \end{center}
   
-  Trebuie selectat \^in fiecare caz componenta nou instalat\u a.
   
 
   
@@ -156,20 +162,27 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
   
   \par
   O particularitate a SVM-ului este c\u a algoritmii pot prelucra doar date numerice. Astfel \^in cazul \^in care
-  se dore\c stea clasificarea unui text, acesta trebuie transformat \^intr-o reprezentare numeric\u a.
+  se dore\c ste clasificarea unei date de alt tip (de exemplu text), acesta trebuie 
+  transformat \^intr-o reprezentare numeric\u a.
   
   \par
   \^In cadrul acestui proiect va fi folosit programul \textit{LibSVM} pentru clasificarea email-urilor. 
   Acesta este o implementare r\u asp\^andit\u a a SVM.
-  Deoarece proiectul se concentreaz\u a pe clasificarea texturilor folosind SVM, \^in clasificare se vor
+  Deoarece proiectul se concentreaz\u a pe clasificarea texturilor folosind algoritmii SVM, \^in clasificare se vor
   lua \^in considerare dor subiectele email-urilor. Aceste \c siruri de caractere sunt prelucrate \c si transformate
-  de c\u atre un program Java \^in format numeric. Valorile ob\c tinute trebuie scalate folosind \verb+svm-scale+
-  pentru a asigura o acurate\c te c\^ at mai mare a rezultatelor.
+  de c\u atre un program Java \^in format numeric \c tin\^and cont de caracterisiticile semnificative ale \c sirurilor de 
+  caractere. Valorile ob\c tinute trebuie scalate folosind \verb+svm-scale+
+  pentru a asigura o acurate\c te c\^ at mai mare a rezultatelor. Scalarea const\u a din aplicarea unei func\c tii 
+  de transformare liniar\u a
+  a numerelor din intervalul $[a,b]$ \^in intervalul $[0,1]$ sau $[-1,1]$ ob\c tinute prin 
+  convertirea \c sirurilor de caractere.
   
   \par 
-  Datele ob\c tinute dup\u a scalare sunt folosite pentru a antrena re\c teaua SVM, care dup\u a aceast\u a 
-  etap\u a gener\^and un model este capabil s\u a clasifice noile date de intrare. Este important ca datele de
-  intrare s\u a fie generale, con\c tin\^and c\^at mai multe exemple din fiecare clas\u a.
+  Datele ob\c tinute dup\u a scalare sunt folosite pentru a antrena re\c teaua SVM (\^inv\u a\c tare), 
+  care dup\u a aceast\u a 
+  etap\u a gener\^and un a\c sa numit \textit{model} este capabil s\u a clasifice noile date de intrare. Este important ca datele de
+  intrare s\u a fie generale, con\c tin\^and c\^at mai multe exemple din fiecare clas\u a (clasele sunt acele tipuri \^in 
+  care SVM trebuie s\u a clasifice \c sirurile de caractere prelucrate).
   
   \par
   Datele de antrenare ale \textit{LibSVM} au urm\u atorul format:
@@ -186,30 +199,31 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
   \par
   Datele de intrare \c si de test au formatul prezentat, \c si sunt separate printre ele prin caracterul 
   \verb|'\n'|. Deci fiecare dat\u a trebuie s\u a fie conform formatului prezentat \c si s\u a fie
-  amplasat\u a pe un r\^and al fi\c sierului de intrare pentru \^inv\u a\c tare.
+  amplasat\u a pe un r\^and al fi\c sierului de intrare pentru \^inv\u a\c tare. Nu este permis\u a amplasarea
+  mai multor date pe acela\c si r\^and.
 
   \par
-  Un exemplu bun este cel \^in care dorim s\u a clasific\u am propozi\c tiile din punctul de vedere al 
+  Un exemplu u\c sor de \^in\c teles este cel \^in care dorim s\u a clasific\u am propozi\c tiile din punctul de vedere al 
   complexit\u a\c tii acestora. Avem deci propozi\c tii simple \c si compuse. Lu\u am \^in considerare de
   exemplu caracteristici precum:
    
   \begin{itemize}
-     \item{} num\u arul virgulelor 
-     \item num\u arul caracterelor
-     \item num\u arul de apari\c tii ai cuvintelor de leg\u atur\u a (de exemplu: 
+     \item{} num\u arul virgulelor din propozi\c tie
+     \item num\u arul total al caracterelor
+     \item num\u arul de apari\c tii al cuvintelor de leg\u atur\u a (de exemplu: 
       \textit{\c si}, \textit{respectiv}, \textit{a\c sadar}, \textit{totodat\u a} etc.)
   \end{itemize}
   
   \par
   Num\u arul virgulelor va apare la indexul 1, num\u arul caracterelor la indexul 2 \c si num\u arul 
-  de cuvinte de leg\u atur\u a la indexul 3. Consider\u am c\u a propozi\c tie simpl\u a are eticheta clasei 
+  de cuvinte de leg\u atur\u a la indexul 3. Consider\u am c\u a propozi\c tia simpl\u a are eticheta clasei 
   -1 \c si cea compus\u a eticheta clasei 1. 
   
   \par
-  Astfel propozi\c tia \textit{R\u azvan merge \c si la \c scoal\u a.} este reprezentat\u a prin linia
+  Astfel propozi\c tia \textit{R\u azvan merge la \c scoal\u a.} este reprezentat\u a prin linia
   
   \begin{verbatim}
-    -1 1:0 2:26 3:1
+    -1 1:0 2:23 3:0
   \end{verbatim}
 
   Identic propozi\c tia \textit{Anca este harnic\u a, a\c sadar ea \^inva\c t\u a \^in fiecare zi.} este
@@ -227,52 +241,28 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
     \verb|./svm-train input.txt model|
   \end{center}
   
-  Apoi se creeaz\u a fi\c sierul de test care are aceea\c si forma ca \c si fi\c sierul \verb|input.txt|.
+  \par
+  Apoi se creeaz\u a fi\c sierul de test (\verb+test.txt+ care are 
+  aceea\c si forma ca \c si fi\c sierul \verb|input.txt|).
   Apel\^and predic\c tia pe acest fi\c sier \textit{LibSVM} va determina de care clas\u a (-1 sau 1)
-  apar\c tine fiecare propozi\c tie \c si apoi va compara rezultele ob\c tinute cu cele date. Astfel se 
-  calculeaz\u a acurate\c tea. Predict\c tia se ruleaz\u a 
-
+  apar\c tine fiecare propozi\c tie \c si apoi va compara rezultele ob\c tinute cu cele date (autoevaluare). Astfel se 
+  calculeaz\u a acurate\c tea. Predic\c tia se ruleaz\u a folosind comanda
   
-\colorbox{blue!20}{\fbox{\begin{minipage}{1.0\textwidth} 
-                                          
-The teaching objectives for this week are:
-\begin{enumerate}
- \item To run and understand the toy examples provided by the tool
-\item To identify what realistic problems are adequate for your tool 
-\end{enumerate}
-\end{minipage}}}
+  \begin{center}
+    \verb|./svm-predict test.txt model output.txt|
+  \end{center}
 
-\vspace{0.5cm}
+  \par
+  Fi\c sierul text generat \verb+output.txt+ con\c tine pe fiecare linie num\u arul clasei de care apar\c tine 
+  propozi\c tia codificat\u a prin caracteristici de pe aceea\c si linie din fi\c sierul
+  \verb+test.txt+ conform SVM-ului.
+  
+  
+  
+  
+  
 
-\colorbox{blue!20}{\fbox{\begin{minipage}{1.0\textwidth} 
-My personal objectives for this class are:
-\begin{enumerate}
- \item 
- \item 
-\end{enumerate}
-\end{minipage}}}
-
-
-Describe the examples that you run. 
-What type of problems can be supported by the tool?
  
- \section{Exercises}
-\begin{enumerate}
- \item Detail one example that you run. Which are the input and the output? 
- Describe the structure of the code. 
- \item Describe the real world problems that can be solved by your tool/algorithm.
-\end{enumerate}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 1       
-\end{minipage}}
-\vspace{0.5cm}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 2       
-\end{minipage}}
-\vspace{0.5cm}
-
  
 \chapter{Understanding conceptual instrumentation ($W_4$)}
 \label{ch:tool}
@@ -309,7 +299,31 @@ Solution to exercise 2
 
 
 
-\chapter{Project description ($W_5$)}
+
+
+
+
+
+
+\chapter{Descrierea proiectului ($W_5$)}
+
+  \par
+  Proiectul de fa\c t\u a are titlul \textit{Clasificarea email-urilor}. A\c sa cum sugereaz\u a \c si titlul
+  scopul aplica\c tiei dezvoltate este filtrarea \c si clasificarea email-urilor. Se consider\u a urm\u atoarele
+  dou\u a clase de email-uri:
+  
+  \begin{itemize}
+    \item email-uri cu caracter de reclam\u a (advertising email)
+    \item alte email-uri
+  \end{itemize}
+
+  Email-urile trebuie prelucrate automat de c\u atre program. Pentru aceasta se dezvolt\u a o aplica\c tie Java 
+  care folose\c ste biblioteca \textit{JavaMail}. Acesta se conecteaz\u a la contul de email al utilizatorului folosind 
+  conexiunea internet \c si descarc\u a subiectele umail-urilor necitite.
+  
+  \par
+  Programul Java pe l\^ang\u a desc\u arcarea email-urilor care trebuie analizate mai are \^inc\u a o component\u a care
+  transform\u a 
 
 The teaching objectives for this week are:
 \begin{enumerate}

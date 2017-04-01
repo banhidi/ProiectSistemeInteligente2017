@@ -2,34 +2,27 @@
 \BOOKMARK [0][-]{chapter.2}{Rularea si \356ntelegerea exemplelor \(W3\)}{}% 2
 \BOOKMARK [0][-]{chapter.3}{Understanding conceptual instrumentation \(W4\)}{}% 3
 \BOOKMARK [1][-]{section.3.1}{Exercises}{chapter.3}% 4
-\BOOKMARK [0][-]{chapter.4}{Project description \(W5\)}{}% 5
-\BOOKMARK [1][-]{section.4.1}{Narrative description}{chapter.4}% 6
-\BOOKMARK [1][-]{section.4.2}{Facts}{chapter.4}% 7
-\BOOKMARK [1][-]{section.4.3}{Specifications}{chapter.4}% 8
-\BOOKMARK [1][-]{section.4.4}{Top level design of the scenario}{chapter.4}% 9
-\BOOKMARK [1][-]{section.4.5}{Knowledge acquisition}{chapter.4}% 10
-\BOOKMARK [1][-]{section.4.6}{Related work}{chapter.4}% 11
-\BOOKMARK [1][-]{section.4.7}{Exercises}{chapter.4}% 12
-\BOOKMARK [0][-]{chapter.5}{Preliminary results \(W7\)}{}% 13
-\BOOKMARK [1][-]{section.5.1}{Exercises}{chapter.5}% 14
-\BOOKMARK [0][-]{chapter.6}{Implementation details \(W9\)}{}% 15
-\BOOKMARK [1][-]{section.6.1}{Relevant code}{chapter.6}% 16
-\BOOKMARK [1][-]{section.6.2}{Common bad practice in AI undergraduate projects}{chapter.6}% 17
-\BOOKMARK [1][-]{section.6.3}{Exercises}{chapter.6}% 18
-\BOOKMARK [0][-]{chapter.7}{Tool expressivity \(W10\)}{}% 19
-\BOOKMARK [0][-]{chapter.8}{Graphs and experiments \(W11\)}{}% 20
-\BOOKMARK [1][-]{section.8.1}{Evaluation metrics}{chapter.8}% 21
-\BOOKMARK [0][-]{chapter.9}{Related work and documentation \(W12\)}{}% 22
-\BOOKMARK [1][-]{section.9.1}{Related approaches}{chapter.9}% 23
-\BOOKMARK [1][-]{section.9.2}{Advantages and limitations of your solution}{chapter.9}% 24
-\BOOKMARK [1][-]{section.9.3}{Possible extensions of the current work}{chapter.9}% 25
-\BOOKMARK [0][-]{chapter.10}{Project demo and documentation \(W13\)}{}% 26
-\BOOKMARK [1][-]{section.10.1}{Exercises}{chapter.10}% 27
-\BOOKMARK [0][-]{chapter.11}{Results dissemination and feedback \(W14\)}{}% 28
-\BOOKMARK [1][-]{subsection.11.0.1}{Public presentation}{chapter.11}% 29
-\BOOKMARK [2][-]{subsection.11.0.2}{Self-assessment}{subsection.11.0.1}% 30
-\BOOKMARK [2][-]{subsection.11.0.3}{Formative feedback}{subsection.11.0.1}% 31
-\BOOKMARK [2][-]{subsection.11.0.4}{Problem-based learning}{subsection.11.0.1}% 32
-\BOOKMARK [0][-]{appendix.A}{Your original code}{}% 33
-\BOOKMARK [0][-]{appendix.B}{Quick technical guide for running your project}{}% 34
-\BOOKMARK [0][-]{appendix.C}{Check list}{}% 35
+\BOOKMARK [0][-]{chapter.4}{Descrierea proiectului \(W5\)}{}% 5
+\BOOKMARK [0][-]{chapter.5}{Preliminary results \(W7\)}{}% 6
+\BOOKMARK [1][-]{section.5.1}{Exercises}{chapter.5}% 7
+\BOOKMARK [0][-]{chapter.6}{Implementation details \(W9\)}{}% 8
+\BOOKMARK [1][-]{section.6.1}{Relevant code}{chapter.6}% 9
+\BOOKMARK [1][-]{section.6.2}{Common bad practice in AI undergraduate projects}{chapter.6}% 10
+\BOOKMARK [1][-]{section.6.3}{Exercises}{chapter.6}% 11
+\BOOKMARK [0][-]{chapter.7}{Tool expressivity \(W10\)}{}% 12
+\BOOKMARK [0][-]{chapter.8}{Graphs and experiments \(W11\)}{}% 13
+\BOOKMARK [1][-]{section.8.1}{Evaluation metrics}{chapter.8}% 14
+\BOOKMARK [0][-]{chapter.9}{Related work and documentation \(W12\)}{}% 15
+\BOOKMARK [1][-]{section.9.1}{Related approaches}{chapter.9}% 16
+\BOOKMARK [1][-]{section.9.2}{Advantages and limitations of your solution}{chapter.9}% 17
+\BOOKMARK [1][-]{section.9.3}{Possible extensions of the current work}{chapter.9}% 18
+\BOOKMARK [0][-]{chapter.10}{Project demo and documentation \(W13\)}{}% 19
+\BOOKMARK [1][-]{section.10.1}{Exercises}{chapter.10}% 20
+\BOOKMARK [0][-]{chapter.11}{Results dissemination and feedback \(W14\)}{}% 21
+\BOOKMARK [1][-]{subsection.11.0.1}{Public presentation}{chapter.11}% 22
+\BOOKMARK [2][-]{subsection.11.0.2}{Self-assessment}{subsection.11.0.1}% 23
+\BOOKMARK [2][-]{subsection.11.0.3}{Formative feedback}{subsection.11.0.1}% 24
+\BOOKMARK [2][-]{subsection.11.0.4}{Problem-based learning}{subsection.11.0.1}% 25
+\BOOKMARK [0][-]{appendix.A}{Your original code}{}% 26
+\BOOKMARK [0][-]{appendix.B}{Quick technical guide for running your project}{}% 27
+\BOOKMARK [0][-]{appendix.C}{Check list}{}% 28

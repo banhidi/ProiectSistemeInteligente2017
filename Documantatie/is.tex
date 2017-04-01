@@ -59,20 +59,23 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
   proiectului este necesar\u a instalarea ma\c sinii virtuale Java, deoarece prelucrarea \c si transformarea datelor
   \^in formatul numeric \^in\c teles de \textit{LibSVM} este realizat\u a de un program scris \^in limbajul Java.
   
-  \^In continuare se prezint\u a metodade instalare a tool-ului \textit{LibSVM} \c si a pachetului Oracle JDK 
-  pentru sistemul de operare Ubuntu 16.10 64, versiunea pe 64 de bi\c ti.
+  \^In continuare se prezint\u a metoda de instalare a tool-ului \textit{LibSVM} \c si a pachetului Oracle JDK
+  (\textit{Java Development Kit})
+  pentru sistemul de operare Ubuntu 16.10 64, versiunea pe 64 de bi\c ti (Oracle JDK este preferat fa\c t\u a de 
+  versiunile Open JDK pentru perfoman\c t\u a \c si compatibilitate maxim\u a).
   
   \par
   Programul \textit{LibSVM} se poate desc\u arca de la adresa 
   \href{https://www.csie.ntu.edu.tw/~cjlin/libsvm/}{https://www.csie.ntu.edu.tw/~cjlin/libsvm/}.
   Dup\u a finalizarea desc\u arc\u arii, fi\c sierul desc\u arcat poate fi dezarhivat folosind comanda
   \begin{center}
-    \verb|tar -xvzf nume\_ fi\c sier|
+    \verb|tar -xvzf nume_fisier|
   \end{center}
 
   \par
-  Dup\u a dezarhivare, trebuie s\u a navig\u am in interiorul fi\c sierului dezarhivat cu comanda linux 
-  \verb|cd|. Pentru a compila programul, trebuie doar s\u a introducem comanda \verb|make|. Dup\u a executarea 
+  Dup\u a dezarhivare, trebuie s\u a navig\u am \^in interiorul fi\c sierului dezarhivat cu comanda linux 
+  \verb|cd nume_fisier_dezarhivat|. Pentru a compila programul, trebuie doar s\u a introducem comanda 
+  \verb|make|. Dup\u a executarea 
   compil\u arii vor fi generate urm\u atorele executabile:
   
   \begin{center}
@@ -94,16 +97,18 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
   \end{center}
 
   \par
-  \^In continuare se prezint\u a instalarea a \textit{Java Development Kit}. Acest pachet con\c tine at\^at 
-  ma\c sina virtual\u a Java c\^at \c si compilatorul Java respectiv biblioteca standard al limbajului.
-  \textit{JDK} poate fi desc\u arcat de pe pagina web 
-  \href{http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}
-  {http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}.
-  Trebuie selectat\u a versiunea destinat\u a pentru sistemul de operare Linux x64, cu extensia 
-  \textit{tar.gz}. 
+  \^In continuare se prezint\u a instalarea pachetului \textit{Java Development Kit}. Acest pachet con\c tine at\^at 
+  ma\c sina virtual\u a Java c\^at \c si compilatorul Java respectiv biblioteca standard a limbajului.
+  JDK poate fi desc\u arcat de pe pagina web 
   
-  \par
-  Dup\u a finalizarea desc\u arc\u arii fi\c sierului, acesta trebuie dezarhivat cu ajutorul comenzii de dezarhivare 
+  \begin{center}
+    \href{http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}
+    {http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}
+  \end{center}
+  
+  Trebuie selectat\u a versiunea destinat\u a pentru sistemul de operare Linux pe 64 de bi\c ti (
+  \textit{x64}) cu extensia \textit{tar.gz}. Dup\u a finalizarea desc\u arc\u arii fi\c sierului, 
+  acesta trebuie dezarhivat cu ajutorul comenzii de dezarhivare 
   folosite \c si la \textit{LibSVM}. Fi\c sierul dezarhivat trebuie copiat \^in directorul 
   \verb|/usr/lib/jvm| cu ajutorul comenzii:
   
@@ -112,7 +117,8 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
   \end{center}
   
   \par
-  Urm\u atorul pas este s\u a configur\u am noul \textit{jvm} instalat ca cel de baz\u a al sistemului.
+  Urm\u atorul pas este s\u a configur\u am ma\c sina virtual\u a Java instalat\u a \^in acest mod
+  ca \c si cel de baz\u a al sistemului.
   Prima dat\u a trebuie s\u a comunic\u am sistemului de operare instalarea cu ajutorul comenzilor
   
   \begin{center}
@@ -128,7 +134,8 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
   \end{center}
   
   \par
-  Apoi trebuie s\u a configuram acestea cu ajutorul comenzilor
+  Apoi trebuie s\u a configur\u am acestea. Trebuie selectat \^in fiecare caz componenta nou instalat\u a 
+  \^in listele afi\c sate dup\u a rularea comenzilor
   
   \begin{center}
     \begin{verbatim}
@@ -137,7 +144,6 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
     \end{verbatim}
   \end{center}
   
-  Trebuie selectat \^in fiecare caz componenta nou instalat\u a.
   
 
   
@@ -156,20 +162,27 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
   
   \par
   O particularitate a SVM-ului este c\u a algoritmii pot prelucra doar date numerice. Astfel \^in cazul \^in care
-  se dore\c stea clasificarea unui text, acesta trebuie transformat \^intr-o reprezentare numeric\u a.
+  se dore\c ste clasificarea unei date de alt tip (de exemplu text), acesta trebuie 
+  transformat \^intr-o reprezentare numeric\u a.
   
   \par
   \^In cadrul acestui proiect va fi folosit programul \textit{LibSVM} pentru clasificarea email-urilor. 
   Acesta este o implementare r\u asp\^andit\u a a SVM.
-  Deoarece proiectul se concentreaz\u a pe clasificarea texturilor folosind SVM, \^in clasificare se vor
+  Deoarece proiectul se concentreaz\u a pe clasificarea texturilor folosind algoritmii SVM, \^in clasificare se vor
   lua \^in considerare dor subiectele email-urilor. Aceste \c siruri de caractere sunt prelucrate \c si transformate
-  de c\u atre un program Java \^in format numeric. Valorile ob\c tinute trebuie scalate folosind \verb+svm-scale+
-  pentru a asigura o acurate\c te c\^ at mai mare a rezultatelor.
+  de c\u atre un program Java \^in format numeric \c tin\^and cont de caracterisiticile semnificative ale \c sirurilor de 
+  caractere. Valorile ob\c tinute trebuie scalate folosind \verb+svm-scale+
+  pentru a asigura o acurate\c te c\^ at mai mare a rezultatelor. Scalarea const\u a din aplicarea unei func\c tii 
+  de transformare liniar\u a
+  a numerelor din intervalul $[a,b]$ \^in intervalul $[0,1]$ sau $[-1,1]$ ob\c tinute prin 
+  convertirea \c sirurilor de caractere.
   
   \par 
-  Datele ob\c tinute dup\u a scalare sunt folosite pentru a antrena re\c teaua SVM, care dup\u a aceast\u a 
-  etap\u a gener\^and un model este capabil s\u a clasifice noile date de intrare. Este important ca datele de
-  intrare s\u a fie generale, con\c tin\^and c\^at mai multe exemple din fiecare clas\u a.
+  Datele ob\c tinute dup\u a scalare sunt folosite pentru a antrena re\c teaua SVM (\^inv\u a\c tare), 
+  care dup\u a aceast\u a 
+  etap\u a gener\^and un a\c sa numit \textit{model} este capabil s\u a clasifice noile date de intrare. Este important ca datele de
+  intrare s\u a fie generale, con\c tin\^and c\^at mai multe exemple din fiecare clas\u a (clasele sunt acele tipuri \^in 
+  care SVM trebuie s\u a clasifice \c sirurile de caractere prelucrate).
   
   \par
   Datele de antrenare ale \textit{LibSVM} au urm\u atorul format:
@@ -186,30 +199,31 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
   \par
   Datele de intrare \c si de test au formatul prezentat, \c si sunt separate printre ele prin caracterul 
   \verb|'\n'|. Deci fiecare dat\u a trebuie s\u a fie conform formatului prezentat \c si s\u a fie
-  amplasat\u a pe un r\^and al fi\c sierului de intrare pentru \^inv\u a\c tare.
+  amplasat\u a pe un r\^and al fi\c sierului de intrare pentru \^inv\u a\c tare. Nu este permis\u a amplasarea
+  mai multor date pe acela\c si r\^and.
 
   \par
-  Un exemplu bun este cel \^in care dorim s\u a clasific\u am propozi\c tiile din punctul de vedere al 
+  Un exemplu u\c sor de \^in\c teles este cel \^in care dorim s\u a clasific\u am propozi\c tiile din punctul de vedere al 
   complexit\u a\c tii acestora. Avem deci propozi\c tii simple \c si compuse. Lu\u am \^in considerare de
   exemplu caracteristici precum:
    
   \begin{itemize}
-     \item{} num\u arul virgulelor 
-     \item num\u arul caracterelor
-     \item num\u arul de apari\c tii ai cuvintelor de leg\u atur\u a (de exemplu: 
+     \item{} num\u arul virgulelor din propozi\c tie
+     \item num\u arul total al caracterelor
+     \item num\u arul de apari\c tii al cuvintelor de leg\u atur\u a (de exemplu: 
       \textit{\c si}, \textit{respectiv}, \textit{a\c sadar}, \textit{totodat\u a} etc.)
   \end{itemize}
   
   \par
   Num\u arul virgulelor va apare la indexul 1, num\u arul caracterelor la indexul 2 \c si num\u arul 
-  de cuvinte de leg\u atur\u a la indexul 3. Consider\u am c\u a propozi\c tie simpl\u a are eticheta clasei 
+  de cuvinte de leg\u atur\u a la indexul 3. Consider\u am c\u a propozi\c tia simpl\u a are eticheta clasei 
   -1 \c si cea compus\u a eticheta clasei 1. 
   
   \par
-  Astfel propozi\c tia \textit{R\u azvan merge \c si la \c scoal\u a.} este reprezentat\u a prin linia
+  Astfel propozi\c tia \textit{R\u azvan merge la \c scoal\u a.} este reprezentat\u a prin linia
   
   \begin{verbatim}
-    -1 1:0 2:26 3:1
+    -1 1:0 2:23 3:0
   \end{verbatim}
 
   Identic propozi\c tia \textit{Anca este harnic\u a, a\c sadar ea \^inva\c t\u a \^in fiecare zi.} este
@@ -231,7 +245,7 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
   Apoi se creeaz\u a fi\c sierul de test (\verb+test.txt+ care are 
   aceea\c si forma ca \c si fi\c sierul \verb|input.txt|).
   Apel\^and predic\c tia pe acest fi\c sier \textit{LibSVM} va determina de care clas\u a (-1 sau 1)
-  apar\c tine fiecare propozi\c tie \c si apoi va compara rezultele ob\c tinute cu cele date. Astfel se 
+  apar\c tine fiecare propozi\c tie \c si apoi va compara rezultele ob\c tinute cu cele date (autoevaluare). Astfel se 
   calculeaz\u a acurate\c tea. Predic\c tia se ruleaz\u a folosind comanda
   
   \begin{center}
@@ -248,6 +262,7 @@ Universitatea Tehnic\u a din Cluj-Napoca\\
   
   
 
+ 
  
 \chapter{Understanding conceptual instrumentation ($W_4$)}
 \label{ch:tool}
@@ -284,218 +299,78 @@ Solution to exercise 2
 
 
 
-\chapter{Project description ($W_5$)}
-
-The teaching objectives for this week are:
-\begin{enumerate}
- \item To have a clear description of what you intend to develop.
-\item To point to specific resources (datasets, knowledge bases, external tools) 
-that support the development of your idea and which minimise the risk of failure.
-\item To identify related work (articles) that are relevant or similar to your approach.
-\end{enumerate}
-
-\vspace{0.5cm}
-
-My personal objectives for this class are:
-\begin{enumerate}
- \item 
- \item 
-\end{enumerate}
-
-
-To encourage the development of AI skills, 
-you  were required to come up with a significant semester project 
-You have to  apply ideas from the course to a problem of your own.
-
-Which domain to choose is a decision that only you can make. 
-The more aware of the tool capabilities, the more adequate the decision.
-Realistic and original scenarios are encouraged. 
-Well known toy problems (salesmen, map colouring, logistic planning, wumpus, sudoku, queens, missionaries and canibals, etc.) do not worth much for your grade. 
-Your scenario should be realistic and should be business oriented. 
-
-Select clearly defined problems and not generic ones 
-(i.e I will do something in the medical domain). 
-Note that the focus is both on programming and on modelling the reality into a formal representation.
-
-
-Before specifying your project you must understand as much as possible about the application domain (medicine, bank, human resource management, etc). 
-You must also understand functionality required by the stakeholders of your system. 
-Let the problem drive the modelling - the more you understand the domain, the more technical solutions need to be solved by you. 
-
-Consider answering to the following questions:
-\begin{enumerate}
- \item What will your system do?
-\item Which is the scope of coverage your system aims for?
-\item What will be the input of your program?
-\item What will be the output of your program?
-\item What will be the knowledge of your system?
-\item Which would be the narrative description of running scenario(s)?
-\item Which are the stakeholders of your system?
-\item Which are the asumptions?
-\end{enumerate}
-
-\begin{example}[What will system do]
- 
-\end{example}
-
-\begin{example}[Scope of the program]
- 
-\end{example}
-
-In this problem-based model you learn what you 
-need to know in order to solve a problem. 
-However, note that you have total flexibility in stating your project objectives.
-For instance, if you consider that studying more 
-than one computational technology (or AI algorithms) brings more benefits, 
-you are encourage to do it. 
-You just have to frame your task under one scenario umbrella. 
-One example: you can investigate the problem of {\it fake review detection} with 
-various machine learning algorithms: decision trees, nayve bayes, neural networks, ensemble learning. 
-This road helps you to study and compare the above algorihtms on your own problem.
-A second example: you can help a {\it robot to escape from a maze} 
-with various search algorithms (A*, greedy, deep first, uniform cost) 
-or computation technologies (constraint satisfaction problems, planning, 
-searching with observations).
-Hence, both the problem-based model or a more algorithmic approach to AI 
-(if formulated under the umbrella of a single scenario) 
-are accepted for this laboratory.
-
-
-
-\section{Narrative description}
-This should be a simple textual description of your scenario.
-You should explain your project objectives.
-Put them all together in half a page.
-
-\section{Facts}
-You start the analyze of the problem by identifying 
-the relevant facts from the scenario.
-This fact-identification step helps you to represent the problem.
-
-
-\section{Specifications}
-List of specifications. 
-Use your knowledge from "System Engineering" on how to write specifications and requirments (see Exercise 1).
-
-\section{Top level design of the scenario}
-Technical description of your scenario. 
-In some cases, you may provide a figure with the architecture of the system. 
-
-
-\section{Knowledge acquisition}
-You should be aware that computing interacts with many different domains. 
-Solutions to many AI problems require both computing skills and domain knowledge.
-
-First, you should ask yourself if you have the necessary background and resources to do
-a project in the chosen area. 
-
-\paragraph{How do represent knowledge?} 
-Your system relies on a knowledge base.
-You have to describe how do you represent this knowledge.
-You might choose between different logics: 
-propositional logic, first order logic, modal logics, description logics, epistemic logics, 
-temporal logics, and so on. 
-
-\paragraph{Where are you getting the required knowledge/data}
-Point towards the knowledge bases that you plan to exploit. 
-The existence of these sources are required to prove that your approach is realistic.
-
-Examples of knowledge sources include:
-\begin{itemize}
-\item Data sets: i.e., https://archive.ics.uci.edu/ml/datasets.html 
-\item Statistics: i.e., http://ec.europa.eu/eurostat 
-\item Ontology repositories in OWL or RDF format.
-\end{itemize}
-
-
-If you will be using books, give their reference. 
-If you hope to exploit people for elicitation, give their names.
-If you aim to use data sources or knowledge repositories list them and be sure that you have 
-access to the needed knowledge. 
-Indicate what you have accomplished so far in knowledge acquisition. 
 
 
 
 
-\section{Related work}
-You have to identify articles or conference papers relevant to your scenario.
-Searching for adequate references can be both rewarding and frustrating.
-
-Browse online libraries like:
-\begin{itemize}
- \item Science Direct
- \item IEEE Computer Society Digital Library: IEEEXplore
- \item SpringerLink:  http://www.springerlink.com/computer-science/
- \item ACM Digital library: http://portal.acm.org/dl.cfm
-%\item The Collection of Computer Science Bibliographies: http://liinwww.ira.uka.de/bibliography/
-%\item Computer Science Technical Reports: http://www.nzdl.org/
-\end{itemize}
-A valuable resource is Google Scholar. 
-Some references may be frely available on ResearchGate. 
-
-Looking at the examples remains the best ways of learning how to present a literature analysis. 
-Eacy article does include such section.
 
 
-Obtain the \texttt{.bib} file of each article that you will rely on. 
-Cite and very briefly describe the main idea of each paper that you have read.
-Save the most relevant related papers in a local directory.
-Use your own words. 
-Don't use automatic translation tools (i.e., Google translate) just to expand your documentation.
-You should already be aware that this is a form of cheating. 
-Everything in your project that does not come with a citation is assumed to be your own work.
+\chapter{Descrierea proiectului ($W_5$)}
+
+  \par
+  Proiectul de fa\c t\u a are titlul \textit{Clasificarea email-urilor}. A\c sa cum sugereaz\u a \c si titlul
+  scopul aplica\c tiei dezvoltate este filtrarea \c si clasificarea email-urilor. Se consider\u a urm\u atoarele
+  dou\u a clase de email-uri:
+  
+  \begin{itemize}
+    \item email-uri cu caracter de reclam\u a (advertising email)
+    \item alte email-uri
+  \end{itemize}
+
+  Email-urile trebuie prelucrate automat de c\u atre program. Pentru aceasta se dezvolt\u a o aplica\c tie Java 
+  care folose\c ste biblioteca \textit{JavaMail}. Acesta se conecteaz\u a la contul de email al utilizatorului folosind 
+  conexiunea internet \c si descarc\u a subiectele umail-urilor necitite.
+  
+  \par
+  Programul Java pe l\^ang\u a desc\u arcarea email-urilor care trebuie analizate mai are o component\u a. Aceasta
+  transform\u a \c sirurile de caractere (subiectele fiec\u arui email) \^intr-o reprezentare numeric\u a \^in\c teleas\u a
+  de \textit{LibSVM}. \^In aceast\u a transformare trebuie s\u a se \c tin\u a cont de caracteristicile relevante ale 
+  \c sirului de caractere \^in privin\c ta clasific\u arii \^in cele dou\u a categorii. De exemplu cuvintele precum 
+  \textit{pre\c t, reducere} sau \textit{ofert\u a} mai mult ca sigur apar\c tin unei reclame.
+  
+  \par
+  Re\c teaua SVM este antrenat\u a cu ajutorul email-urilor personale recep\c tionate de-a lungul timpului. Setul de date
+  trebuie s\u a cuprind\u a cca. jum\u atate de email-uri reclam\u a \c si cealalt\u a jum\u atate alte email-uri. Acestea
+  vor fi convertite automat folosind programul scris \^in Java dar necesit\u a \c si interven\c tie 
+  umana pentru a le clasifica.
+  
+  \par
+  Pe baza cuno\c stin\c telor asimilate prin \^inv\u a\c tare SVM va putea decide dac\u a un email nou este sau nu
+  o reclam\u a. Pentru a \^imbun\u ata\c ti acurate\c tea programului (rata de clasificare corect\u a), \^inainte de
+  etapa de \^inv\u a\c tare, caracteristicile trebuie scalate (din intervalul de care apar\c tin acestea se vor transforma
+  printr-o func\c tie liniar\u a \^in intervalul $[0,1]$).
+  
+  \par
+  Scopul aplica\c tiei este deci clasificarea email-urilor \^in cele dou\u a categorii amintite. Aceast\u a opera\c tie
+  poate fi efectuat\u a cu ajutorul antrenamentului prin email-urile personale primite de-a lungul timpului de la 
+  diferite market-uri online (de exemplu \textit{emag.ro, cel.ro, flanco.ro}) \c si alte email-uri care apar\c tin 
+  clasei secunde.
+  
+  \par
+  Datele de intrare ale aplica\c tiei sunt:
+  
+  \begin{itemize}
+    \item adres\u a de email
+    \item parola contului
+  \end{itemize}
+  
+  Datele de ie\c sire sunt dou\u a liste de email-uri: o list\u a care con\c tine emailurile necitite reclam\u a \c si 
+  cealalt\u a list\u a populat\u a cu email-urile care nu sunt reclame.
+  
+  \par
+  Diagrama bloc al alica\c tiei dezvoltate este reprezentat\u a \^in figura \ref{fig.blocDiagram}.
+  
+  \begin{figure}[h]
+    \includegraphics[scale=0.7]{fig/BlocDiagram.png}
+    \caption{Diagrama bloc a aplica\c tiei}
+    \label{fig.blocDiagram}
+  \end{figure}
+  
 
 
-The following is an example of such \texttt{bib} structure:
-
-\begin{verbatim}
- @article{bench-capon:argumentation-in-ai,
- author = {Bench-Capon, Trevor J. M.  and Dunne, Paul E. },
- title = {{A}rgumentation in {A}rtificial {I}ntelligence},
- journal = {Artificial Intelligence},
- volume = {171},
- number = {10-15},
- year = {2007},
- issn = {0004-3702},
- pages = {619--641},
- doi = {http://dx.doi.org/10.1016/j.artint.2007.05.001},
- publisher = {Elsevier Science Publishers Ltd.},
- address = {Essex, UK}
-}
-\end{verbatim}
-
-Don't forget to include the above structure in your \texttt{.bib} file. 
-Then, generate the \texttt{.bbl} file in order to correctly appear in the \textit{Bibliography} section.
-
-\section{Exercises}
-\begin{enumerate}
-\item Sum up what is the aim of your project in a Twitter-sized phrase (140 characters)
-\item Recall or identify an engineering methodology to write specifications. 
- Cite this methodology and employ it for specifying your project.
- \item Which are the differences between requirments and specifications? 
- \item Identify similar scenarios proposed by your collegues. 
- Think at some form of collaboration with one of your collegues having similar interests.
-\end{enumerate}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 1       
-\end{minipage}}
-\vspace{0.5cm}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 2       
-\end{minipage}}
-\vspace{0.5cm}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 3       
-\end{minipage}}
-\vspace{0.5cm}
-
-\fbox{\begin{minipage}{16cm}
-Solution to exercise 4       
-\end{minipage}}
-\vspace{0.5cm}
+  
+  
+  
 
 
 
